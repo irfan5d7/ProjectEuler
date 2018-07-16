@@ -1,0 +1,18 @@
+import math
+def is_prime(n):
+    for i in range(2,int(math.sqrt(n))+1):
+        if n%i==0:
+            return False
+    return True
+
+def solution():
+    count = 0
+    n = 10001
+    start = 2
+    while(count!=n):
+        if(is_prime(start)):
+            count+=1
+        start+=1
+    print(start-1)
+
+solution()

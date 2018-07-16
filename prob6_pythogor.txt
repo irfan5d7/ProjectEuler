@@ -1,0 +1,13 @@
+def pythagoreanTriplets(val):
+    c, m = 0, 2
+    while True:
+        for n in range(1, m):
+            a = m * m - n * n
+            b = 2 * m * n
+            c = m * m + n * n
+            if a+b+c == val:
+                print(a*b*c)
+                return
+        m = m + 1
+
+pythagoreanTriplets(1000)
